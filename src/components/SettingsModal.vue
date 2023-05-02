@@ -2,14 +2,21 @@
   <div class="modalMain" @click.self="closeModal">
     <div class="modalCenter">
         <h2>Character</h2>
-        <button @click.self="saveChar">Save</button>
-        <button @click.self="loadChar">Load</button>
+        <button class="cat"  @click.self="saveChar">Save</button>
+        <button  @click.self="loadChar">Load</button>
+        <!-- <n-button @click.self="saveChar" class="cat" size="large" color="black" >Save</n-button>
+        <n-button @click.self="loadChar" size="large" color="black" >Load</n-button> -->
     </div>
   </div>
 </template>
 
 <script>
+// import { NButton } from 'naive-ui'
+
 export default {
+  components: {
+    // NButton
+  },
     methods: {
         closeModal() {
             this.$emit('close')
@@ -89,5 +96,8 @@ button:active {
     outline: none;
 }
 
+.cat {
+  margin-right: 10px;
+}
 
 </style>

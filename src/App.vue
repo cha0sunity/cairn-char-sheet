@@ -38,7 +38,17 @@
     <div>
       <div class="pack">
         <div class="hand">
-          <input type="text" class="smallbox" id="hand1" :value=hand1>
+          <input type="checkbox" class="smallbox" id="hand1" >
+          <input type="checkbox" class="smallbox" id="hand2" >
+          <input type="checkbox" class="smallbox" id="hand3" >
+          <input type="checkbox" class="smallbox" id="hand4" >
+          <input type="checkbox" class="smallbox" id="hand5" >
+          <input type="checkbox" class="smallbox" id="hand6" >
+          <input type="checkbox" class="smallbox" id="hand7" >
+          <input type="checkbox" class="smallbox" id="hand8" >
+          <input type="checkbox" class="smallbox" id="hand9" >
+          <input type="checkbox" class="smallbox" id="hand10">
+          <!-- <input type="text" class="smallbox" id="hand1" :value=hand1>
           <input type="text" class="smallbox" id="hand2" :value=hand2>
           <input type="text" class="smallbox" id="hand3" :value=hand3>
           <input type="text" class="smallbox" id="hand4" :value=hand4>
@@ -47,7 +57,7 @@
           <input type="text" class="smallbox" id="hand7" :value=hand7>
           <input type="text" class="smallbox" id="hand8" :value=hand8>
           <input type="text" class="smallbox" id="hand9" :value=hand9>
-          <input type="text" class="smallbox" id="hand10" :value=hand10>
+          <input type="text" class="smallbox" id="hand10" :value=hand10> -->
         </div>
         <div class="item">
           <input type="text" class="itembox" id="item1" :value=item1>
@@ -88,12 +98,13 @@
 
 
     </div>
-
+    
 </template>
 
 <script>
 
 import SettingsModal from './components/SettingsModal.vue'
+import { NButton } from 'naive-ui'
 
 export default {
   name: 'App',
@@ -360,9 +371,14 @@ export default {
  }
  .pack{
   display: flex;
+  margin-top: -242px;
+  margin-left: 49px;
+ }
+ /* .pack{
+  display: flex;
   margin-top: -240px;
   margin-left: 53px;
- }
+ } */
  .menu{
   display: flex;
   margin-top: -275px;
@@ -405,6 +421,18 @@ export default {
   }
 
   .smallbox {
+    display: flex;
+flex-direction: column;
+background-color: transparent;
+height: 14px;
+width: 14px;
+text-align: center;
+border: none;
+margin-bottom: 9px;
+
+  }
+
+  /* .smallbox {
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -415,8 +443,8 @@ export default {
   border: none;
   margin-bottom: 12px;
   margin-right: 1px;
+  } */
 
-  }
   .smallboxfatigue {
   display: flex;
   flex-direction: column;
